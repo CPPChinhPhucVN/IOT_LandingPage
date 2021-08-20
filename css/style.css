@@ -648,13 +648,13 @@ iframe {
 	color:#071e55;
 }
 
-.navbar-fixed-top .navbar-nav > li > a:hover{
-	color: #e52f37!important;
-	-webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
+	.navbar-fixed-top .navbar-nav > li > a:hover {
+		color: #e9a327 !important;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
 
 .navbar-fixed-top.opaque .navbar-nav .current a {
     color:#e52f37!important;
