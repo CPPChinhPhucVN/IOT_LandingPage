@@ -162,11 +162,63 @@ $(window).on('load', function(){
 		var value = snapshot.val();
 		console.log(value);
 		$('#panel-facebook-posts div').remove();
-		for (var id of value.facebook_posts) {
+		for (var post of value.facebook_posts) {
+			var msg = post.message.trim();
+			var sp = msg.split('\n');
+			sp = sp.filter(function (el) {
+				return el != '';
+			  });
+			var title = sp[0];
+			var body = '';
+			var count = 1;
+			var id = post.id.split('_')[1];
+			for (var i = 1; i<sp.length; i++) {
+				if (sp[i].trim().length > 0) {
+					body += sp[i] + '</br>';
+					count++;
+				}
+				if (body.length > 100 || count >= 3) {
+					if (body.length > 150)
+						body = body.substr(0, 150)+' ...<br/>';
+					if (i != sp.length -1)
+						body+= `<a href="https://www.facebook.com/${id}" target="_blank">Xem thêm</a>`;
+					break;
+				}
+			}
+
 			$('#panel-facebook-posts').append(`
-				<div class="col-md-4">
-					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCPPChinhPhucVN%2Fposts%2F${id}%2F&width=340&show_text=true&appId=719574194844552&height=522" style="border:none;overflow:hidden; width: 100%; height: 550px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				<!--begin col-sm-3 -->
+				<div class="col-md-3">
+					
+					<!--begin blog-item -->
+					<div class="blog-item">
+						
+						<!--begin popup image -->
+						<div class="popup-wrapper">
+							<div class="popup-gallery">
+									<img src="${post.full_picture}" class="width-100" alt="pic">
+									<span class="eye-wrapper2"><i class="fa fa-link eye-icon"></i></span>
+							</div>
+						</div>
+						<!--end popup image -->
+							
+						<!--begin blog-item_inner -->
+						<div class="blog-item-inner">
+						
+							<h3 class="blog-title"><a href="https://www.facebook.com/${id}" target="_blank">${title}</a></h3>
+							
+							<a href="https://www.facebook.com/${id}" target="_blank" class="blog-icons last"><i class="far fa-clock"></i> ${(new Date(post.created_time)).toLocaleDateString()}</a>
+							
+							<p>${body}</p>
+													
+						</div>
+						<!--end blog-item-inner -->
+						
+					</div>
+					<!--end blog-item -->
+						
 				</div>
+				<!--end col-sm-3->
 			`);
 		}
 	});
