@@ -126,9 +126,7 @@ $(window).on('load', function(){
 
 	
 
-	/* ========================================================== */
-	/*   Popup-Gallery                                            */
-	/* ========================================================== */
+
 	$('.popup-gallery').find('a.popup1').magnificPopup({
 		type: 'image',
 		gallery: {
@@ -157,3 +155,18 @@ $(window).on('load', function(){
 		}
 	});  
  
+	/* ========================================================== */
+	/*   Custom code                                              */
+	/* ========================================================== */
+	database.ref(`landing`).once('value', function(snapshot) {
+		var value = snapshot.val();
+		console.log(value);
+		$('#panel-facebook-posts div').remove();
+		for (var id of value.facebook_posts) {
+			$('#panel-facebook-posts').append(`
+				<div class="col-md-4">
+					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCPPChinhPhucVN%2Fposts%2F${id}%2F&width=340&show_text=true&appId=719574194844552&height=522" style="border:none;overflow:hidden; width: 100%; height: 550px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				</div>
+			`);
+		}
+	});
