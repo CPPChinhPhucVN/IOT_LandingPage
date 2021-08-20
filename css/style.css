@@ -664,35 +664,35 @@ iframe {
     transition: all 0.5s ease;
 }
 
-.navbar-fixed-top .navbar-nav > li > a.discover-btn {
-	border: 1px solid #e52f37;
-	color: #fff!important;
-	background:#e52f37;
-	border-radius: 23px 23px;
-	padding: 12px 18px!important;
-	margin-left: 10px;
-	margin-right: 15px;
-     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
+	.navbar-fixed-top .navbar-nav > li > a.discover-btn {
+		border: 1px solid #e9a327;
+		color: #fff !important;
+		background: #e9a327;
+		border-radius: 23px 23px;
+		padding: 12px 18px !important;
+		margin-left: 10px;
+		margin-right: 15px;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
 
-.navbar-fixed-top .navbar-nav > li > a.discover-btn:hover {
-	color: #e52f37!important;
-	background: transparent;
-	border: 1px solid #e52f37;
-}
+		.navbar-fixed-top .navbar-nav > li > a.discover-btn:hover {
+			color: #e9a327 !important;
+			background: transparent;
+			border: 1px solid #e9a327;
+		}
 
-.navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn {
-	color: #fff!important;
-	background: #e52f37;
-	border: 1px solid #e52f37;
-     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
+	.navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn {
+		color: #fff !important;
+		background: #e9a327;
+		border: 1px solid #e9a327;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
 
 .navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn:hover {
 	border: 1px solid #e52f37;
