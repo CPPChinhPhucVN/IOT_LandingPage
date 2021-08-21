@@ -221,6 +221,13 @@ $(window).on('load', function(){
 				<!--end col-sm-3->
 			`);
 		}
+
+		if (value.analytics) {
+			$('.count-users').text(value.analytics.total_users);
+			$('.count-matchs').text(value.analytics.total_matchs);
+			$('.count-tours').text(value.analytics.total_tournaments);
+			$('.count-schools').text(value.analytics.total_schools);
+		}
 	});
 
 $(function(){
