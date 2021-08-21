@@ -1057,6 +1057,41 @@ blockquote {
 	color: #7c8595;
 }
 
+#faq ul li{
+    list-style:one;
+}
+#faq div[data-toggle="collapse"]{
+   border-bottom:1px solid #BBDEFB;
+   width:100%;
+   cursor:pointer;
+   padding:1%;
+}
+#faq .collapse{
+    background:#F5F5F5;
+}
+
+#faq .pd-2{
+    padding:2%;
+}
+#faq .pd-r-2{
+    padding-right:2%;
+}
+#faq .pd-l-2{
+    padding-left:2%;
+}
+#faq .pd-t-2{
+    padding-top:2%;
+}
+#faq .pd-b-2{
+    padding-bottom:2%;
+}
+#faq .faq-body {
+	-ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
 /* Features */
 .feature-box{
 	overflow: hidden;
@@ -2296,6 +2331,7 @@ a.btn-red:visited, a.btn-red:focus{
 	font-family: 'Nunito', sans-serif;
 	margin-top: 15px;
 	padding: 0;
+	margin: 0;
 	font-size: 18px;
     font-weight: 700;
     color: #071e55;
