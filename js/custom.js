@@ -160,7 +160,6 @@ $(window).on('load', function(){
 	/* ========================================================== */
 	database.ref(`landing`).once('value', function(snapshot) {
 		var value = snapshot.val();
-		console.log(value);
 		$('#panel-facebook-posts div').remove();
 		for (var post of value.facebook_posts) {
 			var msg = post.message.trim();
@@ -231,8 +230,78 @@ $(window).on('load', function(){
 	});
 
 $(function(){
-	//$(".chevron-down").
 	$("div[data-toggle=collapse]").click(function(){
 		$(this).children('span').toggleClass("fa-chevron-down fa-chevron-up");
 	});
 })
+
+var tourData = null;
+$(function(){
+	database.ref(`/tournaments`).once('value', function(snapshot) {
+		var value = snapshot.val();
+		tourData = value;
+
+		var listTours = Object.values(tourData);
+		listTours.sort(function (a, b) {
+			if ((b.matchTotal - b.matchArchived) !== (a.matchTotal - a.matchArchived))
+				return (b.matchTotal - b.matchArchived) - (a.matchTotal - a.matchArchived)
+			else
+				return ((b.matchLast || 0) - (a.matchLast || 0))
+		});
+
+		var cnt = 0;
+		for (var tour of listTours) {
+			cnt++;
+			var str_star = '';
+			if (tour.review) {
+				var half = Math.round(tour.review.rating*2);
+				str_star = `<i class="fa fa-star" aria-hidden="true"></i>`.repeat(half/2);
+				if (half % 2 === 1)
+					str_star += `<i class="fas fa-star-half-alt" aria-hidden="true"></i>`
+				str_star += `<i class="far fa-star" aria-hidden="true"></i>`.repeat((10-half)/2)
+			}
+
+			$('.panel-tournaments').append(`
+				<!--begin col-md-4-->
+				<div class="col-md-3">
+
+					<div class="feature-box ${(cnt > 12) ? "collapse more-tournaments" : ""}">
+
+						<img class="tour-logo" src="${tour.tourLogo}"></img>
+
+						<div class="feature-box-text">
+
+							<h4>${tour.tourId} - ${tour.tourName}</h4>
+							<div class="testim-rating">
+								${str_star}
+							</div>
+							<p>
+								${ (tour.review) ? 
+									`${Math.round(tour.review.rating*10)/10}/5.0 (${tour.review.totalReview} đánh giá)`
+								: "Chưa có đánh giá"
+									
+								}
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end col-md-4 -->
+			`);
+			if (cnt > 12) {
+				$('.btn-showall').show();
+			} else {
+				$('.btn-showall').hide();
+			}
+		}
+	});
+});
+
+var showing_all=false;
+function show_all() {
+	showing_all = !showing_all;
+	$('.more-tournaments').collapse((showing_all) ? 'show' : 'hide');
+	$('.btn-showall').text((showing_all)?'Ẩn bớt':'Xem thêm');
+}
