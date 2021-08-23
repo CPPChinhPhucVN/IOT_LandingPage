@@ -178,7 +178,7 @@ iframe {
     line-height: 90px;
     text-align: center;
     font-size: 40px;
-    color: #e52f37;
+    color: #e9a327;
     background-color: rgba(255, 255, 255, 0.78);
     border-radius: 50% 50%;
     display: inline-block;
@@ -193,7 +193,7 @@ iframe {
 }
 
 .video-play-icon i {
-    color: #e52f37;
+    color: #e9a327;
     font-size: 40px!important;
 }
 
@@ -202,7 +202,7 @@ iframe {
 }
 
 .red {
-    color: #e52f37;
+    color: #e9a327;
 }
 
 .strong{
@@ -268,7 +268,7 @@ iframe {
 }
 
 .section-red {
-	background: #e52f37;
+	background: #e9a327;
 	padding: 90px 0 70px 0;
 }
 
@@ -569,7 +569,7 @@ iframe {
 	font-family: 'Roboto', sans-serif;
 	font-size: 28px;
 	font-weight: 500;
-	color: #e52f37;
+	color: #e9a327;
 }
 
 .navbar-brand img {
@@ -578,15 +578,15 @@ iframe {
 }
 
 .navbar-brand:hover{
-	color: #e52f37;
+	color: #e9a327;
 }
 
 .navbar-fixed-top.opaque .navbar-brand{
-	color: #e52f37;
+	color: #e9a327;
 }
 
 .navbar-fixed-top.opaque .navbar-brand:hover{
-	color: #e52f37;
+	color: #e9a327;
 }
 
 .navbar-fixed-top.opaque .navbar-brand img{
@@ -601,7 +601,7 @@ iframe {
 }
 
 .navbar-toggler {
-    border: 1px solid #e52f37;
+    border: 1px solid #e9a327;
 }
 
 .navbar-toggler-icon {
@@ -610,7 +610,7 @@ iframe {
 }
 
 .navbar-toggler-icon i {
-    color: #e52f37;
+    color: #e9a327;
     vertical-align: middle;
 }
 
@@ -629,6 +629,7 @@ iframe {
 	border-bottom: 1px solid #efefef;
 	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.04)!important;
 	transition: all 0.25s ease-in-out 0s;
+	z-index: 99;
 }
 
 .navbar-fixed-top.opaque .navbar-nav > li{
@@ -720,12 +721,12 @@ iframe {
 
 .footer p > a {
 	font-size: 17px;
-	color: #e52f37;
+	color: #e9a327;
 	text-decoration:underline;
 }
 
 .footer p > a:hover {
-	color: #e52f37;
+	color: #e9a327;
 	text-decoration:underline;
 }
 
@@ -741,7 +742,7 @@ a.footer-links {
 }
 
 a.footer-links:hover {
-	color: #e52f37;
+	color: #e9a327;
 	text-decoration:underline;
     transition: all .5s ease-in-out;
 }
@@ -794,7 +795,7 @@ ul.footer_social li a i.fa-dribble {
 }
 
 ul.footer_social li a i:hover {
-	color:#e52f37!important;
+	color:#e9a327!important;
 }
 
 /* ========================================================== */
@@ -900,7 +901,7 @@ ul.footer_social li a i:hover {
 }
 
 .team-info::after {
-    background: #e52f37;
+    background: #e9a327;
     display: inline-block;
     vertical-align: middle;
     content: "";
@@ -995,7 +996,7 @@ ul.footer_social li a i:hover {
 
 .main-services h3 a{
 	font-size: 22px;
-	color: #e52f37;
+	color: #e9a327;
 }
 
 .main-services h4{
@@ -1182,7 +1183,7 @@ blockquote {
 }
 
 p.follow-instagram a{
-	color: #e52f37;
+	color: #e9a327;
 }
 
 .popup-wrapper{
@@ -1225,7 +1226,7 @@ p.follow-instagram a{
 
 .popup-gallery a span.eye-wrapper, 
 .popup-gallery a span.eye-wrapper2 {
-	background-color:#e52f37;
+	background-color:#e9a327;
 	position: absolute;
 	display: block;
 	overflow:hidden;
@@ -1253,7 +1254,7 @@ p.follow-instagram a{
 }
 
 .popup-gallery a:hover span{
-	opacity: 1;
+	opacity: 0.35;
 }
 
 .popup-gallery img,
@@ -2020,7 +2021,7 @@ a.blog-icons:hover{
 	height:56px;
     background-color:#ffffff;
 	border: 1px solid #ffffff;
-    color:#e52f37;  
+    color:#e9a327;  
     display: inline;
 	margin:0 5px 0 0;
     -moz-border-radius:5px;  
@@ -2036,7 +2037,7 @@ a.blog-icons:hover{
 
 #newsletter-form #submit-button-newsletter:hover {
 	color: #ffffff;
-    background-color:#e52f37;
+    background-color:#e9a327;
 	border: 1px solid #fff;
 	transition: background-color .25s ease-in-out;
    -moz-transition: background-color .25s ease-in-out;
@@ -2123,7 +2124,7 @@ textarea{
 input.contact-submit{
 	background: #fff;
     border: none;
-    color: #e52f37;
+    color: #e9a327;
     letter-spacing: 1px;
     cursor: pointer;
     display: inline-block;
@@ -2199,7 +2200,7 @@ p.contact_success_box{
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 500;
-	color: #e52f37;
+	color: #e9a327;
 	background-color: #ffffff;
 	border: 1px solid #fff;
     box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.37);
@@ -2213,7 +2214,7 @@ p.contact_success_box{
 
 .btn-white:hover{
 	box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
-	color: #e52f37!important;
+	color: #e9a327!important;
 	background:#f9f9f9;
 }
 
@@ -2236,7 +2237,7 @@ p.contact_success_box{
 
 .btn-white-border:hover{
 	box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
-	color: #e52f37!important;
+	color: #e9a327!important;
 	background:#f9f9f9;
 }
 
@@ -2277,8 +2278,8 @@ p.contact_success_box{
 	line-height: 22px;
 	font-weight: 500;
 	color: #fff;
-	background-color: #e52f37;
-	border: 1px solid #e52f37;
+	background-color: #e9a327;
+	border: 1px solid #e9a327;
     box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.27);
     letter-spacing: 1px;
 	border-radius: 23px 23px;
@@ -2292,7 +2293,7 @@ p.contact_success_box{
 .btn-red:hover{
 	box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
 	color: #fff!important;
-	background:#e52f37;
+	background:#e9a327;
 }
 
 .btn-blue.small, .btn-blue-line.small, .btn-red.small, .btn-red-line.small, .btn-white.small, .btn-white-border.small {
@@ -2305,9 +2306,9 @@ p.contact_success_box{
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 500;
-	color: #e52f37;
+	color: #e9a327;
 	background-color: #fff;
-	border: 1px solid #e52f37;
+	border: 1px solid #e9a327;
 	border-radius: 23px 23px;
 	margin: 15px 10px 0 0;
 	padding: 20px 30px;
@@ -2318,7 +2319,7 @@ p.contact_success_box{
 
 .btn-red-line:hover{
 	color: #fff!important;
-	background:#e52f37;
+	background:#e9a327;
 }
 
 a.btn-red:visited, a.btn-red:focus{

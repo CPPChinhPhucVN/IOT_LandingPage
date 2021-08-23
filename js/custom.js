@@ -124,36 +124,36 @@ $(window).on('load', function(){
 	})
 });
 
+	// $('.popup-gallery').find('a.popup1').magnificPopup({
+	// 	type: 'image',
+	// 	gallery: {
+	// 	  enabled:true
+	// 	}
+	// }); 
 	
-
-
-	$('.popup-gallery').find('a.popup1').magnificPopup({
-		type: 'image',
-		gallery: {
-		  enabled:true
-		}
-	}); 
-	
-	$('.popup-gallery').find('a.popup2').magnificPopup({
-		type: 'image',
-		gallery: {
-		  enabled:true
-		}
-	}); 
+	$('.popup-gallery').each(function() {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			gallery: {
+				enabled:true
+			}
+		}); 
+	});
  
-	$('.popup-gallery').find('a.popup3').magnificPopup({
-		type: 'image',
-		gallery: {
-		  enabled:true
-		}
-	}); 
+	// $('.popup-gallery').find('a.popup3').magnificPopup({
+	// 	type: 'image',
+	// 	gallery: {
+	// 	  enabled:true
+	// 	}
+	// }); 
  
-	$('.popup-gallery').find('a.popup4').magnificPopup({
-		type: 'iframe',
-		gallery: {
-		  enabled:false
-		}
-	});  
+	// $('.popup-gallery').find('a.popup4').magnificPopup({
+	// 	type: 'iframe',
+	// 	gallery: {
+	// 	  enabled:false
+	// 	}
+	// });  
  
 	/* ========================================================== */
 	/*   Custom code                                              */
