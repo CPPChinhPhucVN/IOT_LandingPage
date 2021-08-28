@@ -158,8 +158,10 @@ $(window).on('load', function(){
 	/* ========================================================== */
 	/*   Custom code                                              */
 	/* ========================================================== */
+	var publicData = null;
 	database.ref(`landing`).once('value', function(snapshot) {
 		var value = snapshot.val();
+		publicData = value;
 		$('#panel-facebook-posts div').remove();
 		for (var post of value.facebook_posts) {
 			var msg = post.message.trim();
@@ -226,6 +228,23 @@ $(window).on('load', function(){
 			$('.count-matchs').text(value.analytics.total_matchs);
 			$('.count-tours').text(value.analytics.total_tournaments);
 			$('.count-schools').text(value.analytics.total_schools);
+		}
+
+		if (value.top) {
+			var cnt = 0;
+			for (var user of value.top) {
+				cnt++;
+				var ele = (cnt <= 5) ? $('.list-leaderboard-1') : $('.list-leaderboard-2');
+				ele.append(`
+				<a class="nav-link">
+					<div class="features-second">
+						<img src="images/services-icon1.png" alt="pic">
+						<h4 class="margin-bottom-5">${user.name}</h4>
+						<p>${user.school.schoolName}</p>
+					</div>
+				</a>
+				`);
+			}
 		}
 	});
 

@@ -2385,6 +2385,10 @@ a.btn-red:visited, a.btn-red:focus{
     border-left: 6px solid #27b36a;
 }
 
+.card-header h5 .btn-link{
+	width: 100%;
+}
+
 .card-header h5 .btn-link p {
 	font-family: 'Nunito', sans-serif;
 	margin-top: 15px;
@@ -2395,6 +2399,7 @@ a.btn-red:visited, a.btn-red:focus{
     color: #071e55;
 	text-align: left!important;
     background-color: transparent;
+	width: calc(100% - 85px);
 }
 
 .card-header h5 .btn-link p span {
