@@ -263,7 +263,7 @@ $(function(){
 
 			$('.panel-tournaments').append(`
 				<!--begin col-md-4-->
-				<div class="col-md-3">
+				<div class="col-sm-6 col-md-3">
 
 					<div class="feature-box ${(cnt > 12) ? "collapse more-tournaments" : ""}">
 

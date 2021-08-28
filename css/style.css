@@ -1118,8 +1118,8 @@ blockquote {
 
 .feature-box img {
 	float:left;
-	width: 55px;
-    height: 55px;
+	width: calc(25% - 10px);
+	max-width: 80px;
 	border-radius: 50%;
     border: solid 1px white;
 }
@@ -1155,7 +1155,7 @@ blockquote {
 .feature-box-text {
 	float: left;
 	width: 75%;
-	margin-left: 30px;
+	margin-left: 10px;
 }
 
 .feature-box h4{
@@ -1748,13 +1748,33 @@ img.mfp-img {
 /* 			               09. PRICING                        */
 /* ========================================================== */
 
-.price-box-white{
+.rank-box-third {
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid #dde9fb;
+	box-shadow: 0 12px 55px 0 rgba(0,0,0,.05);
+	width: 100%;
+	margin-top:30;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	border-radius: 8px 8px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.rank-box-third .name {
+	padding: 20px 20px 0px 20px
+}
+
+.rank-box-second{
 	text-align: center;
 	background-color: #fff;
 	border: 1px solid #dde9fb;
 	box-shadow: 0 12px 55px 0 rgba(0,0,0,.05);
 	padding: 50px 20px;
-	width: 90%;
+	width: 100%;
 	margin-top:30;
 	margin-bottom: 20px;
 	margin-left: 20px;
@@ -1765,13 +1785,13 @@ img.mfp-img {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.price-box-grey{
+.rank-box-first{
 	text-align: center;
 	background: #27b36a;
 	border: 2px solid #27b36a;
 	box-shadow: 10px 12px 40px rgba(0, 0, 0, 0.2);
 	padding: 50px 20px;
-	width: 90%;
+	width: 100%;
 	margin-top:30;
 	margin-bottom: 20px;
 	margin-left: 20px;
@@ -1782,7 +1802,26 @@ img.mfp-img {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.price-box-grey:hover, .price-box-white:hover {	
+.rank-box-first{	
+	transform: scale(1.1,1.1);
+	-ms-transform: scale(1.1,1.1); /* IE 9 */
+    -webkit-transform: scale(1.1,1.1); /* Safari */
+}
+
+.rank-box-second{	
+	transform: scale(1.05,1.05);
+	-ms-transform: scale(1.05,1.05); /* IE 9 */
+    -webkit-transform: scale(1.05,1.05); /* Safari */
+}
+
+.rank-box-third{	
+	transform: scale(1.0,1.0);
+	-ms-transform: scale(1.0,1.0); /* IE 9 */
+    -webkit-transform: scale(1.0,1.0); /* Safari */
+}
+
+
+.rank-box-first:hover, .rank-box-second:hover, .rank-box-third:hover {	
 	transform: scale(1.03,1.03);
 	-ms-transform: scale(1.03,1.03); /* IE 9 */
     -webkit-transform: scale(1.03,1.03); /* Safari */
@@ -1791,23 +1830,24 @@ img.mfp-img {
     -moz-backface-visibility: hidden;
 }
 
-.price-box-white .price-title, .price-box-white ul.pricing-list li.price-value{
+
+.rank-box-second .rank-title, .rank-box-second ul.pricing-list li.rank-value{
 	color: #292929;
 }
 
-.price-box-grey .price-title, .price-box-grey ul.pricing-list li.price-value{
+.rank-box-first .rank-title, .rank-box-first ul.pricing-list li.rank-value{
 	color: #fff;
 }
 
-.price-box-white .price-subtitle,.price-box-white .price-text{
+.rank-box-second .rank-subtitle,.rank-box-second .rank-text{
 	color: #6a6a6a;
 }
 
-.price-box-grey .price-subtitle,.price-box-grey .price-text{
+.rank-box-first .rank-subtitle,.rank-box-first .rank-text{
 	color: #fff;
 }
 
-ul.pricing-list li.price-title{
+ul.pricing-list li.rank-title{
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
@@ -1815,7 +1855,7 @@ ul.pricing-list li.price-title{
 	letter-spacing: 1px;
 }
 
-ul.pricing-list li.price-value{
+ul.pricing-list li.rank-value{
 	font-family: 'Roboto', sans-serif;
 	font-size: 70px;
 	line-height: 70px;
@@ -1825,14 +1865,14 @@ ul.pricing-list li.price-value{
 	margin-bottom: 10px;
 }
 
-ul.pricing-list li.price-subtitle{
+ul.pricing-list li.rank-subtitle{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 500;
 }
 
-ul.pricing-list li.price-text{
+ul.pricing-list li.rank-text{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 28px;
@@ -1840,7 +1880,7 @@ ul.pricing-list li.price-text{
 	margin-bottom: 5px;
 }
 
-ul.pricing-list li.price-tag a{
+ul.pricing-list li.rank-tag a{
 	color: #27b36a;
 	background: #fff;
 	border:1px solid #27b36a;
@@ -1855,13 +1895,13 @@ ul.pricing-list li.price-tag a{
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-ul.pricing-list li.price-tag a:hover{
+ul.pricing-list li.rank-tag a:hover{
 	background: #27b36a;
 	border:1px solid #27b36a;
 	color: #fff;
 }
 
-.price-box-grey ul.pricing-list li.price-tag a:hover{
+.rank-box-first ul.pricing-list li.rank-tag a:hover{
 	background: transparent;
 	border:1px solid #fff;
 	color: #fff;
