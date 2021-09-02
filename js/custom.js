@@ -236,11 +236,12 @@ $(window).on('load', function(){
 				cnt++;
 				var ele = (cnt <= 5) ? $('.list-leaderboard-1') : $('.list-leaderboard-2');
 				ele.append(`
-				<a class="nav-link">
+				<a class="item wow bounceIn" data-wow-duration="1s"  data-wow-delay="${cnt/10}s">
 					<div class="features-second">
-						<img src="images/services-icon1.png" alt="pic">
+						<img class="avatar" src="${user.avatarUrl}" alt="pic">
 						<h4 class="margin-bottom-5">${user.name}</h4>
 						<p>${user.school.schoolName}</p>
+						<span class="rank">${(cnt <= 3) ? "<i class='fa fa-trophy'></i>" : cnt}</span>
 					</div>
 				</a>
 				`);
