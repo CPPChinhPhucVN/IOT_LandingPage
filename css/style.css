@@ -809,8 +809,7 @@ ul.footer_social li a i:hover {
 	background-attachment: fixed;
 	background-size: cover;
   	padding-top: 150px;
-  	padding-bottom: 127px;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .home-section h1{
